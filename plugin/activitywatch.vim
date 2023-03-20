@@ -114,7 +114,7 @@ function! s:Heartbeat()
     let l:timestamp = strftime('%FT%H:%M:%S%z')
     let l:file = expand('%:p')
     let l:language = &filetype
-    let l:project = expand('%:p:h')
+    let l:project = $AW_WATCHER_PROJECT
     " Only send heartbeat if data was changed or more than 1 second has passed
     " since last heartbeat
     if    s:file != l:file ||
